@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('river')
-  .controller('NavbarCtrl', function (twitchDataService) {
+  .controller('NavbarCtrl', function (twitchDataService, selectedGameService) {
     var vm = this;
 
     vm.topGames = [];
@@ -9,6 +9,7 @@ angular.module('river')
     twitchDataService.getTopGames().then(function (data) {
       var topGames = data.top;
       var selected = true;
+      var firstGameName = topGames[0].game.name;
       angular.forEach(topGames, function(gameDetails){
         var game = gameDetails.game;
         vm.topGames.push(
@@ -17,10 +18,22 @@ angular.module('river')
             'logo': game.logo.medium,
             'selected': selected
           });
-          if (selected){
-            selected = false;
-          };
+        if (selected){
+          selected = false;
+        }
 
-      })
-    })
+      });
+      selectedGameService.updateSelectedGame(firstGameName);
+    });
+
+    vm.selectGame = function(game){
+      angular.forEach(vm.topGames, function(topGame){
+        if (topGame.selected){
+          topGame.selected = false;
+        }
+      });
+      game.selected = true;
+      selectedGameService.updateSelectedGame(game.name);
+
+    }
   });

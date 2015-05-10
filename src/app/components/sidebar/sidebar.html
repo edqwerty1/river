@@ -1,30 +1,13 @@
-<div id="sidebar-wrapper">
+<div id="sidebar-wrapper" ng-controller="SidebarController as vm">
   <ul class="sidebar-nav">
     <li class="sidebar-brand">
-      <a href="#">
-        Start Bootstrap
+      <a href="#/">
+        River
       </a>
     </li>
-    <li>
-      <a href="#">Dashboard</a>
-    </li>
-    <li>
-      <a href="#">Shortcuts</a>
-    </li>
-    <li>
-      <a href="#">Overview</a>
-    </li>
-    <li>
-      <a href="#">Events</a>
-    </li>
-    <li>
-      <a href="#">About</a>
-    </li>
-    <li>
-      <a href="#">Services</a>
-    </li>
-    <li>
-      <a href="#">Contact</a>
-    </li>
+    <ul>
+      <li ng-repeat="channel in vm.channels" ng-class="{active: channel.selected}"><a href="" ng-click="vm.selectChannel(channel)">
+        {{channel.name}}</a></li>
+    </ul>
   </ul>
 </div>
