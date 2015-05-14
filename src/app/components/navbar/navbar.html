@@ -1,9 +1,19 @@
 <nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl as vm">
+  <div class="navbar-header">
+
+    <button type="button" class="navbar-toggle" ng-init="vm.navCollapsed = true" ng-click="vm.navCollapsed = !vm.navCollapsed">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+    <div class="collapse navbar-collapse" ng-class="!vm.navCollapsed && 'in'" ng-click="vm.navCollapsed=true">
+   <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6" collapse="">-->
       <ul class="nav navbar-nav">
         <li ng-repeat="game in vm.topGames" ng-class="{active: game.selected}"><a href="" ng-click="vm.selectGame(game)">{{game.name}}</a></li>
       </ul>
     </div>
-  </div>
+  </div><!-- /.navbar-collapse -->
 </nav>

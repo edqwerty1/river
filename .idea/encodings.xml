@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/src/app/components/navbar/navbar.controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/components/navbar/navbar.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/components/sidebar/sidebar.controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/components/sidebar/sidebar.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/main/main.controller.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/app/services/adsADSa.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/app/services/asd.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/app/services/sdfs.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/services/selecteGameService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/services/twitchDataService.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/app/services/twitchService.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/app/services/twitchService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/app/sidebar.scss" charset="UTF-8" />
   </component>
 </project>

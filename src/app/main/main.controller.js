@@ -14,4 +14,8 @@ angular.module('river')
         });
       return vm.stream;
     });
+
+    vm.toggleWrapper = function(){
+        $("#wrapper").toggleClass("toggled");
+    }
   });

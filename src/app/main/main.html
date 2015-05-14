@@ -1,10 +1,10 @@
 <div id="wrapper">
   <div ng-include="'app/components/sidebar/sidebar.html'"></div>
   <div ng-include="'app/components/navbar/navbar.html'"></div>
-  <div id="page-content-wrapper">
+  <div id="page-content-wrapper" ng-controller="MainCtrl as vm">
     <div class="container-fluid">
       <div class="row">
-        <div class="widget wviolet" ng-controller="MainCtrl as vm">
+        <div class="widget wviolet" >
           <div data-cc-widget-header title="{{vm.title}}"></div>
           <div class="widget-content user">
             <h3>{{vm.title}}</h3>
@@ -15,7 +15,11 @@
           </div>
         </div>
       </div>
+        </div>
+<div class="row">
 
+  <a href="" ng-click="vm.toggleWrapper()" class="btn btn-default" id="menu-toggle">Show Channels</a>
+</div>
       <hr>
 
       <div class="footer">

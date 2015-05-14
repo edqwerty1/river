@@ -4,6 +4,8 @@ angular.module('river')
   .controller('NavbarCtrl', function (twitchDataService, selectedGameService) {
     var vm = this;
 
+    vm.navCollapsed = true;
+
     vm.topGames = [];
     vm.test = "test";
     twitchDataService.getTopGames().then(function (data) {
