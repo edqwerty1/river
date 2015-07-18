@@ -25,7 +25,7 @@ angular.module('river')
         }
 
       });
-      selectedGameService.updateSelectedGame(firstGameName);
+  //    selectedGameService.updateSelectedGame(firstGameName);
     });
 
     vm.selectGame = function(game){
