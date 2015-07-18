@@ -14,10 +14,14 @@ angular.module('river')
         vm.channels = [];
         angular.forEach(channels, function(channelDetails){
           var channel = channelDetails.channel;
+          var preview = channelDetails.preview;
           vm.channels.push(
             {
               'name': channel.name,
-              'logo': channelDetails.preview.medium,
+              'displayName': channel.display_name,
+              'previewUrl': preview.medium,
+              'status': channel.status,
+              'viewers': channelDetails.viewers,
               'selected': selected
             });
           if (selected){
@@ -28,15 +32,6 @@ angular.module('river')
       })
     });
 
-    vm.selectChannel = function(channel){
-      angular.forEach(vm.channels, function(r){
-        if (r.selected){
-          r.selected = false;
-        }
-      });
-      vm.channels.selected = true;
-      selectedGameService.updateSelectedChannel(channel.name);
 
-    }
 
   });

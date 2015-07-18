@@ -6,8 +6,9 @@
       </a>
     </li>
     <ul>
-      <li ng-repeat="channel in vm.channels" ng-class="{active: channel.selected}"><a href="" ng-click="vm.selectChannel(channel)">
-        {{channel.name}}</a></li>
+      <li ng-repeat="channel in vm.channels" ng-class="{active: channel.selected}">
+        <div channel-preview channel="channel"></div>
+        </li>
     </ul>
   </ul>
 </div>
