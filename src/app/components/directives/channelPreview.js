@@ -10,7 +10,12 @@ angular.module('river')
       templateUrl: 'app/components/directives/channel-preview.html',
       link: function(scope){
         scope.selectChannel = function(channel){
-          selectedGameService.updateSelectedChannel(channel.name);
+          if (channel.selected){
+            selectedGameService.removeChannel(channel.name);
+          } else{
+            selectedGameService.updateSelectedChannel(channel.name);
+          }
+          channel.selected = !channel.selected;
 
         }
       }

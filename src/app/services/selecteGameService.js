@@ -7,12 +7,16 @@
   function selectedGameService($q, $location, $routeParams) {
     var gameChanged = $q.defer();
     var channelChanged = $q.defer();
+    var channelRemoved = $q.defer();
+    var channels = [];
 
     var service = {
       gameChanged: gameChanged.promise,
       channelChanged: channelChanged.promise,
+      channelRemoved: channelRemoved.promise,
       updateSelectedGame: updateSelectedGame,
       updateSelectedChannel: updateSelectedChannel,
+      removeChannel: removeChannel,
       getChannel: getChannel,
       getGame: getGame
     };
@@ -25,8 +29,21 @@
     }
 
     function updateSelectedChannel(channelName) {
-      $location.search('channel', channelName );
+      if (channels.indexOf(channelName) == -1) {
+        channels.push(channelName);
+      }
+
+      $location.search('channel', channels );
       channelChanged.notify(channelName);
+    }
+
+    function removeChannel(channelName){
+      var index = channels.indexOf(channelName);
+      if (index !== -1) {
+        channels.splice(index, 1);
+      }
+      $location.search('channel', channels );
+      channelRemoved.notify(channelName);
     }
 
     function getGame(){
@@ -39,10 +56,13 @@
     }
 
     function getChannel(){
-      var channelName= $routeParams.channel;
+      var channelNames = $routeParams.channel;
 
-      if (channelName !== undefined && channelName !== ''){
-        channelChanged.notify(channelName);
+      if (channelNames !== undefined && channelNames !== []){
+        angular.forEach(channelNames, function(channel){
+          channelChanged.notify(channel);
+        });
+
       }
 
     }

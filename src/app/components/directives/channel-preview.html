@@ -4,6 +4,7 @@
        <div class="thumbnail">
           <img class="pull-right" ng-src="{{channel.previewUrl}}" alt="{{channel.name}}" ng-click="selectChannel(channel)">
           <div class="caption">
+            <div>{{channel.selected}}</div>
             <div>{{channel.displayName}}</div>
             <div>{{channel.status}}</div>
             <div>{{channel.viewers}}</div>

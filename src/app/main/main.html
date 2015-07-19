@@ -4,10 +4,10 @@
   <div id="page-content-wrapper" ng-controller="MainCtrl as vm">
     <div class="container-fluid">
 
-      <div class="col-md-12">
-      <div class="col-md-6" stream></div>
-      <div class="col-md-6" stream></div>
+      <div ng-repeat="c in vm.channels">
+        <div class="col-md-6 col-lg-4" stream channel-name="c"></div>
       </div>
+
       <div class="row">
         <a href="" ng-click="vm.toggleWrapper()" class="btn btn-default" id="menu-toggle">Show Channels</a>
       </div>

@@ -5,6 +5,7 @@ angular.module('river')
     return {
       restrict: 'EA',
       scope: {
+        channelName: '='
       },
       templateUrl: 'app/components/stream/stream.html',
       controller: 'StreamController',
