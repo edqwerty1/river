@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('river')
-  .controller('NavbarCtrl', function (twitchDataService, selectedGameService) {
+  .controller('NavbarController', function (twitchDataService, selectedGameService) {
     var vm = this;
 
     vm.navCollapsed = true;
@@ -25,7 +25,6 @@ angular.module('river')
         }
 
       });
-  //    selectedGameService.updateSelectedGame(firstGameName);
     });
 
     vm.selectGame = function(game){
@@ -37,5 +36,7 @@ angular.module('river')
       game.selected = true;
       selectedGameService.updateSelectedGame(game.name);
 
-    }
+    };
+
+
   });

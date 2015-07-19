@@ -33,5 +33,6 @@ angular.module('river')
     });
 
 
+    selectedGameService.getGame();
 
   });

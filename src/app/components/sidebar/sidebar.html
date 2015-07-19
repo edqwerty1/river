@@ -1,4 +1,4 @@
-<div id="sidebar-wrapper" ng-controller="SidebarController as vm">
+<div id="sidebar-wrapper">
   <ul class="sidebar-nav">
     <li class="sidebar-brand">
       <a href="#/">
@@ -6,7 +6,7 @@
       </a>
     </li>
     <ul>
-      <li ng-repeat="channel in vm.channels" ng-class="{active: channel.selected}">
+      <li ng-repeat="channel in sidebar.channels" ng-class="{active: channel.selected}">
         <div channel-preview channel="channel"></div>
         </li>
     </ul>

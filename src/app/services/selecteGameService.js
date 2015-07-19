@@ -2,9 +2,9 @@
   'use strict';
 
   var serviceId = 'selectedGameService';
-  angular.module('river').factory(serviceId,['$q','$location', selectedGameService]);
+  angular.module('river').factory(serviceId,['$q','$location', '$routeParams', selectedGameService]);
 
-  function selectedGameService($q, $location) {
+  function selectedGameService($q, $location, $routeParams) {
     var gameChanged = $q.defer();
     var channelChanged = $q.defer();
 
@@ -12,19 +12,39 @@
       gameChanged: gameChanged.promise,
       channelChanged: channelChanged.promise,
       updateSelectedGame: updateSelectedGame,
-      updateSelectedChannel: updateSelectedChannel
+      updateSelectedChannel: updateSelectedChannel,
+      getChannel: getChannel,
+      getGame: getGame
     };
 
     return service;
 
     function updateSelectedGame(gameName) {
-      $location.path(gameName, false);
+      $location.search('game', gameName );
       gameChanged.notify(gameName);
     }
 
     function updateSelectedChannel(channelName) {
-      $location.path(channelName, false);
+      $location.search('channel', channelName );
       channelChanged.notify(channelName);
+    }
+
+    function getGame(){
+      var gameName= $routeParams.game;
+
+      if (gameName !== undefined && gameName !== ''){
+        gameChanged.notify(gameName);
+      }
+
+    }
+
+    function getChannel(){
+      var channelName= $routeParams.channel;
+
+      if (channelName !== undefined && channelName !== ''){
+        channelChanged.notify(channelName);
+      }
+
     }
 
   }
