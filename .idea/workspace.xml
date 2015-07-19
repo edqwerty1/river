@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e160a2-e275-4be8-b375-3e3aa93c72d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/directives/channel-preview.html" afterPath="$PROJECT_DIR$/src/app/components/directives/channel-preview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/directives/channelPreview.js" afterPath="$PROJECT_DIR$/src/app/components/directives/channelPreview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/main/main.controller.js" afterPath="$PROJECT_DIR$/src/app/main/main.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/main/main.html" afterPath="$PROJECT_DIR$/src/app/main/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/selecteGameService.js" afterPath="$PROJECT_DIR$/src/app/services/selecteGameService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.controller.js" afterPath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.controller.js" afterPath="$PROJECT_DIR$/src/app/components/stream/stream.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.directive.js" afterPath="$PROJECT_DIR$/src/app/components/stream/stream.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.scss" afterPath="$PROJECT_DIR$/src/app/components/stream/stream.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="river.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +96,8 @@
       <file leaf-file-name="selecteGameService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/services/selecteGameService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42142856">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.85">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -979,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/selecteGameService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42142856">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.85">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding />
         </state>
       </provider>

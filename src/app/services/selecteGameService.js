@@ -56,12 +56,14 @@
     }
 
     function getChannel(){
-      var channelNames = $routeParams.channel;
+      var tempChannels = $routeParams.channel;
 
-      if (channelNames !== undefined && channelNames !== []){
-        angular.forEach(channelNames, function(channel){
+      if (tempChannels !== undefined && tempChannels !== []){
+        angular.forEach(tempChannels, function(channel){
           channelChanged.notify(channel);
         });
+
+        channels = tempChannels;
 
       }
 
