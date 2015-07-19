@@ -13,12 +13,10 @@
    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6" collapse="">-->
       <ul class="nav navbar-nav">
         <li ng-repeat="game in vm.topGames" ng-class="{active: game.selected}">
-          <div class="thumbnail">
-            <img class="pull-right" ng-src="{{game.logo}}" alt="{{game.name}}" ng-click="vm.selectGame(game)">
-            <div class="caption">
-              <h3><a href="" ng-click="vm.selectGame(game)">{{game.name}}</a></h3>
-              </div>
-            </div>
+          <div class="col-sm-12">
+            <img ng-src="{{game.logo}}" alt="{{game.name}}" ng-click="vm.selectGame(game)">
+              <a href="" ng-click="vm.selectGame(game)">{{game.name}}</a>
+          </div>
           </li>
       </ul>
     </div>

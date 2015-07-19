@@ -17,7 +17,7 @@ angular.module('river')
         vm.topGames.push(
           {
             'name': game.name,
-            'logo': game.logo.medium,
+            'logo': game.logo.small,
             'selected': selected
           });
         if (selected){

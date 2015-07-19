@@ -11,6 +11,9 @@ angular.module('river')
       twitchDataService.getChannels(gameName).then(function (data) {
         var channels = data.streams;
         vm.channels = [];
+
+        var selectedChannels = selectedGameService.getChannels();
+
         angular.forEach(channels, function(channelDetails){
           var channel = channelDetails.channel;
           var preview = channelDetails.preview;
@@ -21,7 +24,7 @@ angular.module('river')
               'previewUrl': preview.medium,
               'status': channel.status,
               'viewers': channelDetails.viewers,
-              'selected': false
+              'selected': selectedChannels.indexOf(channel.name) !== -1
             });
 
         })

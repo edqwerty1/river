@@ -18,7 +18,8 @@
       updateSelectedChannel: updateSelectedChannel,
       removeChannel: removeChannel,
       getChannel: getChannel,
-      getGame: getGame
+      getGame: getGame,
+      getChannels: getChannels
     };
 
     return service;
@@ -59,6 +60,9 @@
       var tempChannels = $routeParams.channel;
 
       if (tempChannels !== undefined && tempChannels !== []){
+        if (tempChannels.constructor !== Array){
+          tempChannels = [tempChannels];
+        }
         angular.forEach(tempChannels, function(channel){
           channelChanged.notify(channel);
         });
@@ -67,6 +71,10 @@
 
       }
 
+    }
+
+    function getChannels(){
+      return channels;
     }
 
   }
