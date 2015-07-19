@@ -1,27 +1,8 @@
 'use strict';
 
 angular.module('river')
-  .controller('MainCtrl', function ($scope, twitchDataService, selectedGameService, $sce) {
+  .controller('MainCtrl', function () {
     var vm = this;
-
-    var showChannel = function(channelName){
-      vm.title = channelName;
-      twitchDataService.getStream(channelName).then(function (data) {
-          vm.streamUrl = $sce.trustAsResourceUrl('http://www.twitch.tv/' + data.stream.channel.name + '/embed');
-          return vm.stream;
-        },
-        function (error) {
-          vm.error = error;
-        });
-      return vm.stream;
-    };
-
-
-
-    selectedGameService.channelChanged.then(function(){}, function(){}, function(channelName) {
-
-    showChannel(channelName)}
-    );
 
 
 
@@ -29,6 +10,5 @@ angular.module('river')
         $("#wrapper").toggleClass("toggled");
     };
 
-    selectedGameService.getChannel();
 
   });

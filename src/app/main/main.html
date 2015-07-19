@@ -1,24 +1,16 @@
 <div id="wrapper">
   <div side-bar></div>
- <div nav-bar></div>
+  <div nav-bar></div>
   <div id="page-content-wrapper" ng-controller="MainCtrl as vm">
     <div class="container-fluid">
-      <div class="row">
-        <div class="widget wviolet" >
-          <div data-cc-widget-header title="{{vm.title}}"></div>
-          <div class="widget-content user">
-            <h3>{{vm.title}}</h3>
-            <iframe class="videoplayer" src="{{vm.streamUrl}}"
-                    height="380px" width="620px" frameborder="0" scrolling="no"></iframe>
-          <div class="widget-foot">
-            <div class="clearfix"></div>
-          </div>
-        </div>
+
+      <div class="col-md-12">
+      <div class="col-md-6" stream></div>
+      <div class="col-md-6" stream></div>
       </div>
-        </div>
-<div class="row">
-  <a href="" ng-click="vm.toggleWrapper()" class="btn btn-default" id="menu-toggle">Show Channels</a>
-</div>
+      <div class="row">
+        <a href="" ng-click="vm.toggleWrapper()" class="btn btn-default" id="menu-toggle">Show Channels</a>
+      </div>
       <hr>
 
       <div class="footer">
