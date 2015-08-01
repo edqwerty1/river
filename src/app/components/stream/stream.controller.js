@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('river')
-  .controller('StreamController', function ($scope, twitchDataService, $sce) {
+  .controller('StreamController', function (twitchDataService, $sce, selectedGameService  ) {
     var vm = this;
 
     var showChannel = function(channelName){
@@ -17,6 +17,10 @@ angular.module('river')
     };
 
 
-    showChannel($scope.channelName);
+    showChannel(vm.channelName);
+
+    vm.closeStream = function(){
+      selectedGameService.removeChannel(vm.channelName);
+    }
 
   });

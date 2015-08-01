@@ -9,6 +9,7 @@ angular.module('river')
       },
       templateUrl: 'app/components/stream/stream.html',
       controller: 'StreamController',
-      controllerAs: 'vm'
+      controllerAs: 'vm',
+      bindToController: true
     }
   });

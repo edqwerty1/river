@@ -2,8 +2,12 @@
   <div class="widget wviolet stream-wrapper" >
     <div data-cc-widget-header title="{{vm.title}}"></div>
     <div class="widget-content user">
-      <h3>{{vm.title}}</h3>
-      <div class="h_iframe">
+
+      <div class="row">
+      <span class="stream-header pull-left">{{vm.title}}</span>
+      <span> <a href="" ng-click="vm.closeStream()" class="btn btn-default pull-right">Close</a></span>
+      </div>
+        <div class="h_iframe">
       <iframe class="videoplayer" src="{{vm.streamUrl}}" height="400" width="2"
                frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>

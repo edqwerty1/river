@@ -8,17 +8,24 @@ angular.module('river')
         channel: '='
       },
       templateUrl: 'app/components/directives/channel-preview.html',
-      link: function(scope){
-        scope.selectChannel = function(channel){
-          if (channel.selected){
+      link: function (scope) {
+        scope.selectChannel = function (channel) {
+          if (channel.selected) {
             selectedGameService.removeChannel(channel.name);
-          } else{
+          } else {
             selectedGameService.updateSelectedChannel(channel.name);
           }
           channel.selected = !channel.selected;
 
-        }
-      }
+        };
 
-    };
+        selectedGameService.channelRemoved.then(function () {
+        }, function () {
+        }, function (channelName) {
+            if (channelName === scope.channel.name){
+              scope.channel.selected = false;
+            }
+        })
+      }
+  };
   });
