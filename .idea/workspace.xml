@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e160a2-e275-4be8-b375-3e3aa93c72d3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.scss" afterPath="$PROJECT_DIR$/src/app/components/stream.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/directives/channel-preview.html" afterPath="$PROJECT_DIR$/src/app/components/directives/channel-preview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/directives/channelPreview.js" afterPath="$PROJECT_DIR$/src/app/components/directives/channelPreview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.controller.js" afterPath="$PROJECT_DIR$/src/app/components/stream/stream.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.directive.js" afterPath="$PROJECT_DIR$/src/app/components/stream/stream.directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/stream/stream.html" afterPath="$PROJECT_DIR$/src/app/components/stream/stream.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="river.iws" />
     <ignored path=".idea/workspace.xml" />
