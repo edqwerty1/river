@@ -1,13 +1,15 @@
 'use strict';
 
 angular.module('river')
-  .controller('NavbarController', function (twitchDataService, selectedGameService) {
+  .controller('NavbarController', function (twitchDataService, selectedGameService, hitboxDataService) {
     var vm = this;
 
     vm.navCollapsed = true;
 
     vm.topGames = [];
     vm.test = "test";
+   // hitboxDataService.getTopGames();
+
     twitchDataService.getTopGames().then(function (data) {
       var topGames = data.top;
       var selected = true;

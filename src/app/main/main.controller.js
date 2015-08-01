@@ -27,6 +27,21 @@ angular.module('river')
         $("#wrapper").toggleClass("toggled");
     };
 
+    vm.getStreamClass = function(){
+      switch(vm.channels.length) {
+        case 1:
+        return "col-md-12 col-lg-12";
+        break;
+        case 2:
+          return "col-md-6 col-lg-6";
+          break;
+        default:
+          return "col-md-6 col-lg-4";
+          break;
+      }
+
+    };
+
     selectedGameService.getChannel();
 
   });
